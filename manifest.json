@@ -2,17 +2,14 @@
 	"manifest_version": 2,
 	"name": "TradingView Extension",
 	"version": "1.0",
-	"description": "Removes gigantic TV logo from bottom left corner, opens TV in popup mode, enables lights out dark mode if necessary, injects html2canvas.",
+	"description": "Removes gigantic TV logo from bottom left corner, opens TV in popup mode, enables lights out dark mode if necessary.",
 	"background": {
 		"scripts": ["/assets/js/background.js"]
 	},
 	"content_scripts": [
 		{
 			"matches": ["https://www.tradingview.com/chart/*"],
-			"js": [
-				"/assets/js/dark.js",
-				"/assets/js/html2canvas.js"
-			]
+			"js": ["/assets/js/dark.js"]
 		}
 	],
 	"permissions": [
